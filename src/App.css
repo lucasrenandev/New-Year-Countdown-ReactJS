@@ -1,0 +1,83 @@
+.container {
+  margin: -10rem 0 0;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  padding: 0 1rem;
+}
+
+.countdown {
+  width: 700px;
+  max-width: 100vw;  
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5rem;
+  display: none;
+}
+
+.time h2 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0 1rem;
+}
+.time h2::before {
+  position: absolute;
+  bottom: -1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.4em;
+  font-weight: 400;
+}
+.time:nth-child(1) h2::before {
+  content: 'Days';
+}
+.time:nth-child(2) h2::before {
+  content: 'Hours';
+}
+.time:nth-child(3) h2::before {
+  content: 'Minutes';
+}
+.time:nth-child(4) h2::before {
+  content: 'Seconds';
+}
+
+.spinner img {
+  display: inline-block;
+  width: 150px;
+  height: auto;
+}
+
+.year {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 200px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .countdown {
+    gap: 4rem;
+  }
+  
+  .year {
+    font-size: 100px;
+  }
+}

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("./assets/background.jpg")
+  no-repeat center center / cover;
+  color: #fff;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+#root::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#root * {
+  z-index: 1;
+}
